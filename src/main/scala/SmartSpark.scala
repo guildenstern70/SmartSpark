@@ -1,6 +1,4 @@
-import java.io.File
 
-import org.apache.commons.io.FileUtils
 import org.apache.spark.{SparkConf, SparkContext}
 
 object SmartSpark {
@@ -25,9 +23,7 @@ object SmartSpark {
 
         counts.foreach(println)
         System.out.println("Total words: " + counts.count())
-        val outputFile = "/tmp/shakespeareWordCount"
-        FileUtils.deleteQuietly(new File(outputFile))
-        counts.saveAsTextFile(outputFile)
+        sc.stop()
     }
 
 }

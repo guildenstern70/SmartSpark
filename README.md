@@ -7,7 +7,7 @@ Download and install 'sbt' from
 
 #### Run application
 
-    sbt run
+    sbt -java-home <path_to_JVM_18> run
 
 #### Build application
 
@@ -16,3 +16,4 @@ Download and install 'sbt' from
 #### Package application to deploy on Spark Clusters
 
     sbt package
+    
